@@ -1,0 +1,18 @@
+{
+	"name":	"darren",
+	"age":	80,
+	"languages":	["C++", "C"],
+	"phone":	{
+		"number":	"18570368134",
+		"type":	"home"
+	},
+	"languages":	[{
+			"name":	"Linux kernel development",
+			"price":	"7.7"
+		}, {
+			"name":	"Linux server development",
+			"price":	"8.0"
+		}],
+	"vip":	true,
+	"address":	null
+}

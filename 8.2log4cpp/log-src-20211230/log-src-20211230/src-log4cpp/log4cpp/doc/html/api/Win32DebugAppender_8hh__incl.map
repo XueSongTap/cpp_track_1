@@ -1,0 +1,15 @@
+<map id="Win32DebugAppender.hh" name="Win32DebugAppender.hh">
+<area shape="rect" id="node3" href="$Export_8hh.html" title="log4cpp/Export.hh" alt="" coords="1277,603,1403,629"/>
+<area shape="rect" id="node4" href="$LayoutAppender_8hh.html" title="log4cpp/LayoutAppender.hh" alt="" coords="1102,80,1285,107"/>
+<area shape="rect" id="node5" href="$Portability_8hh.html" title="log4cpp/Portability.hh" alt="" coords="979,528,1125,555"/>
+<area shape="rect" id="node8" href="$AppenderSkeleton_8hh.html" title="log4cpp/AppenderSkeleton.hh" alt="" coords="1024,155,1219,181"/>
+<area shape="rect" id="node26" href="$BasicLayout_8hh.html" title="log4cpp/BasicLayout.hh" alt="" coords="1193,229,1354,256"/>
+<area shape="rect" id="node9" href="$Appender_8hh.html" title="log4cpp/Appender.hh" alt="" coords="479,229,623,256"/>
+<area shape="rect" id="node25" href="$Filter_8hh.html" title="log4cpp/Filter.hh" alt="" coords="1163,304,1282,331"/>
+<area shape="rect" id="node17" href="$Priority_8hh.html" title="log4cpp/Priority.hh" alt="" coords="521,453,652,480"/>
+<area shape="rect" id="node19" href="$Layout_8hh.html" title="log4cpp/Layout.hh" alt="" coords="960,304,1088,331"/>
+<area shape="rect" id="node20" href="$LoggingEvent_8hh.html" title="log4cpp/LoggingEvent.hh" alt="" coords="839,379,1007,405"/>
+<area shape="rect" id="node22" href="$Threading_8hh.html" title="log4cpp/threading/Threading.hh" alt="" coords="195,379,397,405"/>
+<area shape="rect" id="node21" href="$TimeStamp_8hh.html" title="log4cpp/TimeStamp.hh" alt="" coords="833,453,989,480"/>
+<area shape="rect" id="node23" href="$DummyThreads_8hh.html" title="log4cpp/threading/DummyThreads.hh" alt="" coords="246,453,485,480"/>
+</map>

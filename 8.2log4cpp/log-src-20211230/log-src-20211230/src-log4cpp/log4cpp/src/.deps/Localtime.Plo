@@ -1,0 +1,32 @@
+Localtime.lo: Localtime.cpp /usr/include/stdc-predef.h \
+ ../include/log4cpp/Portability.hh ../include/log4cpp/config.h \
+ ../include/log4cpp/Export.hh Localtime.hh /usr/include/time.h \
+ /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/local/gcc-11.2/lib/gcc/x86_64-linux-gnu/11.2.0/include/stddef.h \
+ /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/timex.h /usr/include/xlocale.h \
+ /usr/include/memory.h /usr/include/string.h
+/usr/include/stdc-predef.h:
+../include/log4cpp/Portability.hh:
+../include/log4cpp/config.h:
+../include/log4cpp/Export.hh:
+Localtime.hh:
+/usr/include/time.h:
+/usr/include/features.h:
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+/usr/local/gcc-11.2/lib/gcc/x86_64-linux-gnu/11.2.0/include/stddef.h:
+/usr/include/x86_64-linux-gnu/bits/time.h:
+/usr/include/x86_64-linux-gnu/bits/types.h:
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+/usr/include/x86_64-linux-gnu/bits/timex.h:
+/usr/include/xlocale.h:
+/usr/include/memory.h:
+/usr/include/string.h:

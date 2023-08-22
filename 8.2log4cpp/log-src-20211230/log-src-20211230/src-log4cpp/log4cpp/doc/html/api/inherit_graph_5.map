@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classlog4cpp_1_1Category.html" title="This is the central class in the log4j package. " alt="" coords="5,5,133,32"/>
+<area shape="rect" id="node2" href="$classlog4cpp_1_1FixedContextCategory.html" title="This Category subclass replaces the NDC field in LoggingEvents with a fixed context string..." alt="" coords="181,5,388,32"/>
+</map>

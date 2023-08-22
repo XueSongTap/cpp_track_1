@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/nty_mysql_client.dir/nty_mysql_client.c.o  -o ../../bin/nty_mysql_client ../../lib/libnty_core.a -lcrypto -lpthread -lssl 

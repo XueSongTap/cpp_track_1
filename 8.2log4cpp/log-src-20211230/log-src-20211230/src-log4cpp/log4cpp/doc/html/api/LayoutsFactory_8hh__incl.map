@@ -1,0 +1,9 @@
+<map id="LayoutsFactory.hh" name="LayoutsFactory.hh">
+<area shape="rect" id="node5" href="$Portability_8hh.html" title="Portability.hh" alt="" coords="161,304,260,331"/>
+<area shape="rect" id="node9" href="$Layout_8hh.html" title="Layout.hh" alt="" coords="435,80,514,107"/>
+<area shape="rect" id="node14" href="$FactoryParams_8hh.html" title="FactoryParams.hh" alt="" coords="679,229,809,256"/>
+<area shape="rect" id="node7" href="$Export_8hh.html" title="log4cpp/Export.hh" alt="" coords="147,379,274,405"/>
+<area shape="rect" id="node10" href="$LoggingEvent_8hh.html" title="log4cpp/LoggingEvent.hh" alt="" coords="301,155,469,181"/>
+<area shape="rect" id="node11" href="$Priority_8hh.html" title="log4cpp/Priority.hh" alt="" coords="423,229,553,256"/>
+<area shape="rect" id="node13" href="$TimeStamp_8hh.html" title="log4cpp/TimeStamp.hh" alt="" coords="191,229,347,256"/>
+</map>

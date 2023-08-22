@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/test_kcp.dir/test.cpp.o CMakeFiles/test_kcp.dir/ikcp.c.o  -o test_kcp 

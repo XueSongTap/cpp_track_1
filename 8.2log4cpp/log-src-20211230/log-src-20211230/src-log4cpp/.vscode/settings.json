@@ -1,0 +1,22 @@
+{
+    "files.associations": {
+        "algorithm": "cpp",
+        "atomic": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp",
+        "iomanip": "cpp",
+        "ios": "cpp",
+        "iterator": "cpp",
+        "memory": "cpp",
+        "queue": "cpp",
+        "string": "cpp",
+        "xiosbase": "cpp",
+        "xlocmon": "cpp",
+        "xlocnum": "cpp",
+        "xloctime": "cpp",
+        "xmemory": "cpp",
+        "xstring": "cpp",
+        "xutility": "cpp",
+        "iosfwd": "cpp"
+    }
+}

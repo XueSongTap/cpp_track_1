@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/nty_server_mulcore.dir/nty_server_mulcore.c.o  -o ../../bin/nty_server_mulcore ../../lib/libnty_core.a -lcrypto -lpthread -lssl 

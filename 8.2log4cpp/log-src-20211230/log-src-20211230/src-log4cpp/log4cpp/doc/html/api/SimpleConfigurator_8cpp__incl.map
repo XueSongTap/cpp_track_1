@@ -1,0 +1,30 @@
+<map id="SimpleConfigurator.cpp" name="SimpleConfigurator.cpp">
+<area shape="rect" id="node2" href="$PortabilityImpl_8hh.html" title="PortabilityImpl.hh" alt="" coords="1930,169,2053,196"/>
+<area shape="rect" id="node11" href="$Category_8hh.html" title="log4cpp/Category.hh" alt="" coords="605,319,748,345"/>
+<area shape="rect" id="node12" href="$Appender_8hh.html" title="log4cpp/Appender.hh" alt="" coords="1175,393,1319,420"/>
+<area shape="rect" id="node20" href="$Priority_8hh.html" title="log4cpp/Priority.hh" alt="" coords="562,617,693,644"/>
+<area shape="rect" id="node22" href="$Layout_8hh.html" title="log4cpp/Layout.hh" alt="" coords="2355,468,2483,495"/>
+<area shape="rect" id="node32" href="$OstreamAppender_8hh.html" title="log4cpp/OstreamAppender.hh" alt="" coords="2385,169,2579,196"/>
+<area shape="rect" id="node36" href="$BasicLayout_8hh.html" title="log4cpp/BasicLayout.hh" alt="" coords="2165,319,2327,345"/>
+<area shape="rect" id="node37" href="$FileAppender_8hh.html" title="log4cpp/FileAppender.hh" alt="" coords="2654,169,2819,196"/>
+<area shape="rect" id="node38" href="$RollingFileAppender_8hh.html" title="log4cpp/RollingFileAppender.hh" alt="" coords="3170,87,3375,114"/>
+<area shape="rect" id="node39" href="$DailyRollingFileAppender_8hh.html" title="log4cpp/DailyRollingFile\lAppender.hh" alt="" coords="2705,80,2867,121"/>
+<area shape="rect" id="node40" href="$SimpleLayout_8hh.html" title="log4cpp/SimpleLayout.hh" alt="" coords="2449,393,2617,420"/>
+<area shape="rect" id="node41" href="$NDC_8hh.html" title="log4cpp/NDC.hh" alt="" coords="1564,393,1683,420"/>
+<area shape="rect" id="node42" href="$PatternLayout_8hh.html" title="log4cpp/PatternLayout.hh" alt="" coords="2153,393,2323,420"/>
+<area shape="rect" id="node44" href="$SimpleConfigurator_8hh.html" title="log4cpp/SimpleConfigurator.hh" alt="" coords="2630,543,2830,569"/>
+<area shape="rect" id="node45" href="$RemoteSyslogAppender_8hh.html" title="log4cpp/RemoteSyslogAppender.hh" alt="" coords="2895,169,3125,196"/>
+<area shape="rect" id="node47" href="$NTEventLogAppender_8hh.html" title="log4cpp/NTEventLogAppender.hh" alt="" coords="5,244,223,271"/>
+<area shape="rect" id="node3" href="$Portability_8hh.html" title="log4cpp/Portability.hh" alt="" coords="1746,692,1893,719"/>
+<area shape="rect" id="node5" href="$Export_8hh.html" title="log4cpp/Export.hh" alt="" coords="2085,767,2212,793"/>
+<area shape="rect" id="node23" href="$LoggingEvent_8hh.html" title="log4cpp/LoggingEvent.hh" alt="" coords="1411,543,1579,569"/>
+<area shape="rect" id="node25" href="$Threading_8hh.html" title="log4cpp/threading/Threading.hh" alt="" coords="726,468,929,495"/>
+<area shape="rect" id="node27" href="$CategoryStream_8hh.html" title="log4cpp/CategoryStream.hh" alt="" coords="294,468,478,495"/>
+<area shape="rect" id="node24" href="$TimeStamp_8hh.html" title="log4cpp/TimeStamp.hh" alt="" coords="1423,617,1579,644"/>
+<area shape="rect" id="node26" href="$DummyThreads_8hh.html" title="log4cpp/threading/DummyThreads.hh" alt="" coords="1097,543,1336,569"/>
+<area shape="rect" id="node29" href="$Manipulator_8hh.html" title="log4cpp/Manipulator.hh" alt="" coords="1857,543,2013,569"/>
+<area shape="rect" id="node33" href="$LayoutAppender_8hh.html" title="log4cpp/LayoutAppender.hh" alt="" coords="2345,244,2528,271"/>
+<area shape="rect" id="node34" href="$AppenderSkeleton_8hh.html" title="log4cpp/AppenderSkeleton.hh" alt="" coords="1623,319,1818,345"/>
+<area shape="rect" id="node35" href="$Filter_8hh.html" title="log4cpp/Filter.hh" alt="" coords="1655,468,1773,495"/>
+<area shape="rect" id="node43" href="$Configurator_8hh.html" title="log4cpp/Configurator.hh" alt="" coords="2371,617,2531,644"/>
+</map>

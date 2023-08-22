@@ -1,0 +1,16 @@
+<map id="BufferingAppender.hh" name="BufferingAppender.hh">
+<area shape="rect" id="node2" href="$LayoutAppender_8hh.html" title="log4cpp/LayoutAppender.hh" alt="" coords="947,80,1130,107"/>
+<area shape="rect" id="node27" href="$TriggeringEventEvaluator_8hh.html" title="log4cpp/TriggeringEventEvaluator.hh" alt="" coords="5,155,240,181"/>
+<area shape="rect" id="node4" href="$Portability_8hh.html" title="log4cpp/Portability.hh" alt="" coords="1164,528,1311,555"/>
+<area shape="rect" id="node8" href="$AppenderSkeleton_8hh.html" title="log4cpp/AppenderSkeleton.hh" alt="" coords="941,155,1136,181"/>
+<area shape="rect" id="node26" href="$BasicLayout_8hh.html" title="log4cpp/BasicLayout.hh" alt="" coords="1325,229,1486,256"/>
+<area shape="rect" id="node6" href="$Export_8hh.html" title="log4cpp/Export.hh" alt="" coords="1174,603,1301,629"/>
+<area shape="rect" id="node9" href="$Appender_8hh.html" title="log4cpp/Appender.hh" alt="" coords="652,229,796,256"/>
+<area shape="rect" id="node25" href="$Filter_8hh.html" title="log4cpp/Filter.hh" alt="" coords="979,304,1098,331"/>
+<area shape="rect" id="node17" href="$Priority_8hh.html" title="log4cpp/Priority.hh" alt="" coords="421,453,552,480"/>
+<area shape="rect" id="node19" href="$Layout_8hh.html" title="log4cpp/Layout.hh" alt="" coords="1173,304,1301,331"/>
+<area shape="rect" id="node20" href="$LoggingEvent_8hh.html" title="log4cpp/LoggingEvent.hh" alt="" coords="651,379,819,405"/>
+<area shape="rect" id="node22" href="$Threading_8hh.html" title="log4cpp/threading/Threading.hh" alt="" coords="1048,379,1251,405"/>
+<area shape="rect" id="node21" href="$TimeStamp_8hh.html" title="log4cpp/TimeStamp.hh" alt="" coords="993,453,1149,480"/>
+<area shape="rect" id="node23" href="$DummyThreads_8hh.html" title="log4cpp/threading/DummyThreads.hh" alt="" coords="678,453,917,480"/>
+</map>

@@ -1,0 +1,1 @@
+gcc lock.c -o lock -lpthread

@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/nty_http_server.dir/nty_http_server.c.o  -o ../../bin/nty_http_server ../../lib/libnty_core.a -lcrypto -lpthread -lssl 

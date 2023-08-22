@@ -1,0 +1,1 @@
+gcc websocket_server.c -o server -lssl -lcrypto

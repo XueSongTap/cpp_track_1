@@ -1,0 +1,18 @@
+<map id="Category.cpp" name="Category.cpp">
+<area shape="rect" id="node2" href="$PortabilityImpl_8hh.html" title="PortabilityImpl.hh" alt="" coords="360,304,483,331"/>
+<area shape="rect" id="node7" href="$Category_8hh.html" title="log4cpp/Category.hh" alt="" coords="1227,155,1370,181"/>
+<area shape="rect" id="node31" href="$HierarchyMaintainer_8hh.html" title="log4cpp/HierarchyMaintainer.hh" alt="" coords="500,80,705,107"/>
+<area shape="rect" id="node32" href="$NDC_8hh.html" title="log4cpp/NDC.hh" alt="" coords="146,229,265,256"/>
+<area shape="rect" id="node33" href="$StringUtil_8hh.html" title="StringUtil.hh" alt="" coords="289,229,383,256"/>
+<area shape="rect" id="node3" href="$Portability_8hh.html" title="log4cpp/Portability.hh" alt="" coords="1023,528,1169,555"/>
+<area shape="rect" id="node5" href="$Export_8hh.html" title="log4cpp/Export.hh" alt="" coords="1033,603,1159,629"/>
+<area shape="rect" id="node8" href="$Appender_8hh.html" title="log4cpp/Appender.hh" alt="" coords="1336,229,1480,256"/>
+<area shape="rect" id="node17" href="$Priority_8hh.html" title="log4cpp/Priority.hh" alt="" coords="1573,453,1704,480"/>
+<area shape="rect" id="node20" href="$LoggingEvent_8hh.html" title="log4cpp/LoggingEvent.hh" alt="" coords="1215,379,1383,405"/>
+<area shape="rect" id="node22" href="$Threading_8hh.html" title="log4cpp/threading/Threading.hh" alt="" coords="733,304,936,331"/>
+<area shape="rect" id="node25" href="$CategoryStream_8hh.html" title="log4cpp/CategoryStream.hh" alt="" coords="1865,379,2049,405"/>
+<area shape="rect" id="node19" href="$Layout_8hh.html" title="log4cpp/Layout.hh" alt="" coords="1133,304,1261,331"/>
+<area shape="rect" id="node21" href="$TimeStamp_8hh.html" title="log4cpp/TimeStamp.hh" alt="" coords="1235,453,1391,480"/>
+<area shape="rect" id="node23" href="$DummyThreads_8hh.html" title="log4cpp/threading/DummyThreads.hh" alt="" coords="329,453,567,480"/>
+<area shape="rect" id="node27" href="$Manipulator_8hh.html" title="log4cpp/Manipulator.hh" alt="" coords="1729,453,1885,480"/>
+</map>

@@ -1,0 +1,1 @@
+gcc trycatch_finally.c -o trycatch_finally -lpthread

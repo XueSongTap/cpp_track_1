@@ -1,0 +1,13 @@
+<map id="log4cpp::PatternLayout::PatternComponent" name="log4cpp::PatternLayout::PatternComponent">
+<area shape="rect" id="node2" href="$structlog4cpp_1_1CategoryNameComponent.html" title="log4cpp::CategoryNameComponent" alt="" coords="209,5,440,32"/>
+<area shape="rect" id="node3" href="$structlog4cpp_1_1FormatModifierComponent.html" title="log4cpp::FormatModifierComponent" alt="" coords="210,56,439,83"/>
+<area shape="rect" id="node4" href="$structlog4cpp_1_1MessageComponent.html" title="log4cpp::MessageComponent" alt="" coords="227,107,422,133"/>
+<area shape="rect" id="node5" href="$structlog4cpp_1_1MillisSinceEpochComponent.html" title="log4cpp::MillisSinceEpoch\lComponent" alt="" coords="237,158,412,199"/>
+<area shape="rect" id="node6" href="$structlog4cpp_1_1NDCComponent.html" title="log4cpp::NDCComponent" alt="" coords="239,224,411,251"/>
+<area shape="rect" id="node7" href="$structlog4cpp_1_1PriorityComponent.html" title="log4cpp::PriorityComponent" alt="" coords="233,275,416,301"/>
+<area shape="rect" id="node8" href="$structlog4cpp_1_1ProcessorTimeComponent.html" title="log4cpp::ProcessorTimeComponent" alt="" coords="209,325,440,352"/>
+<area shape="rect" id="node9" href="$structlog4cpp_1_1SecondsSinceEpochComponent.html" title="log4cpp::SecondsSinceEpoch\lComponent" alt="" coords="227,377,423,418"/>
+<area shape="rect" id="node10" href="$structlog4cpp_1_1StringLiteralComponent.html" title="log4cpp::StringLiteralComponent" alt="" coords="219,443,430,469"/>
+<area shape="rect" id="node11" href="$structlog4cpp_1_1ThreadNameComponent.html" title="log4cpp::ThreadNameComponent" alt="" coords="216,493,433,520"/>
+<area shape="rect" id="node12" href="$structlog4cpp_1_1TimeStampComponent.html" title="log4cpp::TimeStampComponent" alt="" coords="220,544,429,571"/>
+</map>

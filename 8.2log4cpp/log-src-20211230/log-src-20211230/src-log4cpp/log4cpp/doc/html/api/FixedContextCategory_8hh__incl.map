@@ -1,0 +1,14 @@
+<map id="FixedContextCategory.hh" name="FixedContextCategory.hh">
+<area shape="rect" id="node2" href="$Portability_8hh.html" title="log4cpp/Portability.hh" alt="" coords="572,453,719,480"/>
+<area shape="rect" id="node6" href="$Category_8hh.html" title="log4cpp/Category.hh" alt="" coords="674,80,817,107"/>
+<area shape="rect" id="node4" href="$Export_8hh.html" title="log4cpp/Export.hh" alt="" coords="582,528,709,555"/>
+<area shape="rect" id="node7" href="$Appender_8hh.html" title="log4cpp/Appender.hh" alt="" coords="943,155,1087,181"/>
+<area shape="rect" id="node16" href="$Priority_8hh.html" title="log4cpp/Priority.hh" alt="" coords="412,379,543,405"/>
+<area shape="rect" id="node19" href="$LoggingEvent_8hh.html" title="log4cpp/LoggingEvent.hh" alt="" coords="564,304,732,331"/>
+<area shape="rect" id="node21" href="$Threading_8hh.html" title="log4cpp/threading/Threading.hh" alt="" coords="1100,304,1303,331"/>
+<area shape="rect" id="node24" href="$CategoryStream_8hh.html" title="log4cpp/CategoryStream.hh" alt="" coords="153,304,337,331"/>
+<area shape="rect" id="node18" href="$Layout_8hh.html" title="log4cpp/Layout.hh" alt="" coords="615,229,743,256"/>
+<area shape="rect" id="node20" href="$TimeStamp_8hh.html" title="log4cpp/TimeStamp.hh" alt="" coords="567,379,723,405"/>
+<area shape="rect" id="node22" href="$DummyThreads_8hh.html" title="log4cpp/threading/DummyThreads.hh" alt="" coords="1053,379,1291,405"/>
+<area shape="rect" id="node26" href="$Manipulator_8hh.html" title="log4cpp/Manipulator.hh" alt="" coords="67,379,223,405"/>
+</map>

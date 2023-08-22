@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classlog4cpp_1_1Layout.html" title="Extend this abstract class to create your own log layout format. " alt="" coords="5,81,120,108"/>
+<area shape="rect" id="node2" href="$classlog4cpp_1_1BasicLayout.html" title="BasicLayout is a simple fixed format Layout implementation. " alt="" coords="190,5,337,32"/>
+<area shape="rect" id="node3" href="$classlog4cpp_1_1PassThroughLayout.html" title="log4cpp::PassThroughLayout" alt="" coords="168,56,359,83"/>
+<area shape="rect" id="node4" href="$classlog4cpp_1_1PatternLayout.html" title="PatternLayout is a simple fixed format Layout implementation. " alt="" coords="185,107,341,133"/>
+<area shape="rect" id="node5" href="$classlog4cpp_1_1SimpleLayout.html" title="BasicLayout is a simple fixed format Layout implementation. " alt="" coords="186,157,341,184"/>
+</map>

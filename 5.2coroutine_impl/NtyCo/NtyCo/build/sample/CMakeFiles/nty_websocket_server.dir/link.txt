@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/nty_websocket_server.dir/nty_websocket_server.c.o  -o ../../bin/nty_websocket_server ../../lib/libnty_core.a -lcrypto -lpthread -lssl 

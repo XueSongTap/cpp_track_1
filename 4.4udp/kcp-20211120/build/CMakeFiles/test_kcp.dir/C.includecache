@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/yxc/code/cpp_track/4.4udp/kcp-20211120/ikcp.c
+ikcp.h
+/home/yxc/code/cpp_track/4.4udp/kcp-20211120/ikcp.h
+stddef.h
+-
+stdlib.h
+-
+string.h
+-
+stdarg.h
+-
+stdio.h
+-
+
+/home/yxc/code/cpp_track/4.4udp/kcp-20211120/ikcp.h
+stddef.h
+-
+stdlib.h
+-
+assert.h
+-
+sys/types.h
+-
+sys/inttypes.h
+-
+stdint.h
+-
+

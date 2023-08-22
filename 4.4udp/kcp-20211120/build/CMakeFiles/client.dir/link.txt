@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -rdynamic CMakeFiles/client.dir/client.c.o CMakeFiles/client.dir/ikcp.c.o CMakeFiles/client.dir/delay.c.o  -o client -lpthread 

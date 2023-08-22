@@ -1,0 +1,4 @@
+/home/yxc/code/lingsheng/2.4makefile_cmake/src-cmake/2.1-1/build/CMakeFiles/edit_cache.dir
+/home/yxc/code/lingsheng/2.4makefile_cmake/src-cmake/2.1-1/build/CMakeFiles/rebuild_cache.dir
+/home/yxc/code/lingsheng/2.4makefile_cmake/src-cmake/2.1-1/build/CMakeFiles/0voice.dir
+/home/yxc/code/lingsheng/2.4makefile_cmake/src-cmake/2.1-1/build/CMakeFiles/0voice2.dir

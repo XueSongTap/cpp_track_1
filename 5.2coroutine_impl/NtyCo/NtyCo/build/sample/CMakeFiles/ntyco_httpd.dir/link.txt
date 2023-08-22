@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/ntyco_httpd.dir/ntyco_httpd.c.o  -o ../../bin/ntyco_httpd ../../lib/libnty_core.a -lcrypto -lpthread -lssl 

@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 2.6)
+
+project (cjson)
+
+ADD_DEFINITIONS(-O2 -W -Wall -D_REENTRANT -D_FILE_OFFSET_BITS=64 -DAC_HAS_INFO
+-DAC_HAS_WARNING -DAC_HAS_ERROR -DAC_HAS_CRITICAL -DTIXML_USE_STL
+-DAC_HAS_DEBUG -DLINUX_DAEMON)
+
+
+
+# 执行文件
+ADD_EXECUTABLE(cjson_speed cjson_speed.c cJSON.c)
+
+# 链接库
+TARGET_LINK_LIBRARIES(cjson_speed m)
+
+
+
+
+
+

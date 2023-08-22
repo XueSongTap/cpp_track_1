@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/nty_http_epoll.dir/nty_http_epoll.c.o  -o ../../bin/nty_http_epoll ../../lib/libnty_core.a -lcrypto -lpthread -lssl 

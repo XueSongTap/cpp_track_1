@@ -1,0 +1,31 @@
+<map id="AppenderSkeleton.hh" name="AppenderSkeleton.hh">
+<area shape="rect" id="node2" href="$AbortAppender_8hh.html" title="AbortAppender.hh" alt="" coords="113,80,239,107"/>
+<area shape="rect" id="node5" href="$IdsaAppender_8hh.html" title="IdsaAppender.hh" alt="" coords="844,80,964,107"/>
+<area shape="rect" id="node6" href="$LayoutAppender_8hh.html" title="LayoutAppender.hh" alt="" coords="989,80,1123,107"/>
+<area shape="rect" id="node28" href="$NTEventLogAppender_8hh.html" title="NTEventLogAppender.hh" alt="" coords="2223,229,2391,256"/>
+<area shape="rect" id="node30" href="$AppenderSkeleton_8cpp.html" title="AppenderSkeleton.cpp" alt="" coords="1575,80,1729,107"/>
+<area shape="rect" id="node3" href="$AbortAppender_8cpp.html" title="AbortAppender.cpp" alt="" coords="5,155,139,181"/>
+<area shape="rect" id="node4" href="$PropertyConfiguratorImpl_8cpp.html" title="PropertyConfiguratorImpl.cpp" alt="" coords="924,304,1116,331"/>
+<area shape="rect" id="node7" href="$BufferingAppender_8hh.html" title="BufferingAppender.hh" alt="" coords="983,155,1129,181"/>
+<area shape="rect" id="node9" href="$FileAppender_8hh.html" title="FileAppender.hh" alt="" coords="1333,155,1449,181"/>
+<area shape="rect" id="node18" href="$OstreamAppender_8hh.html" title="OstreamAppender.hh" alt="" coords="2053,229,2198,256"/>
+<area shape="rect" id="node20" href="$RemoteSyslogAppender_8hh.html" title="RemoteSyslogAppender.hh" alt="" coords="213,229,395,256"/>
+<area shape="rect" id="node22" href="$StringQueueAppender_8hh.html" title="StringQueueAppender.hh" alt="" coords="430,155,597,181"/>
+<area shape="rect" id="node24" href="$SyslogAppender_8hh.html" title="SyslogAppender.hh" alt="" coords="823,155,958,181"/>
+<area shape="rect" id="node25" href="$Win32DebugAppender_8hh.html" title="Win32DebugAppender.hh" alt="" coords="628,155,799,181"/>
+<area shape="rect" id="node27" href="$LayoutAppender_8cpp.html" title="LayoutAppender.cpp" alt="" coords="1153,155,1295,181"/>
+<area shape="rect" id="node8" href="$BufferingAppender_8cpp.html" title="BufferingAppender.cpp" alt="" coords="872,229,1027,256"/>
+<area shape="rect" id="node10" href="$DailyRollingFileAppender_8hh.html" title="DailyRollingFileAppender.hh" alt="" coords="1101,229,1288,256"/>
+<area shape="rect" id="node12" href="$SimpleConfigurator_8cpp.html" title="SimpleConfigurator.cpp" alt="" coords="1685,304,1843,331"/>
+<area shape="rect" id="node13" href="$RollingFileAppender_8hh.html" title="RollingFileAppender.hh" alt="" coords="1313,229,1469,256"/>
+<area shape="rect" id="node15" href="$BasicConfigurator_8cpp.html" title="BasicConfigurator.cpp" alt="" coords="1493,229,1643,256"/>
+<area shape="rect" id="node16" href="$FileAppender_8cpp.html" title="FileAppender.cpp" alt="" coords="1668,229,1791,256"/>
+<area shape="rect" id="node17" href="$HierarchyMaintainer_8cpp.html" title="HierarchyMaintainer.cpp" alt="" coords="1815,229,1977,256"/>
+<area shape="rect" id="node11" href="$DailyRollingFileAppender_8cpp.html" title="DailyRollingFileAppender.cpp" alt="" coords="1141,304,1334,331"/>
+<area shape="rect" id="node14" href="$RollingFileAppender_8cpp.html" title="RollingFileAppender.cpp" alt="" coords="1359,304,1521,331"/>
+<area shape="rect" id="node19" href="$OstreamAppender_8cpp.html" title="OstreamAppender.cpp" alt="" coords="2045,304,2197,331"/>
+<area shape="rect" id="node21" href="$RemoteSyslogAppender_8cpp.html" title="RemoteSyslogAppender.cpp" alt="" coords="210,304,398,331"/>
+<area shape="rect" id="node23" href="$StringQueueAppender_8cpp.html" title="StringQueueAppender.cpp" alt="" coords="419,229,594,256"/>
+<area shape="rect" id="node26" href="$Win32DebugAppender_8cpp.html" title="Win32DebugAppender.cpp" alt="" coords="670,229,847,256"/>
+<area shape="rect" id="node29" href="$NTEventLogAppender_8cpp.html" title="NTEventLogAppender.cpp" alt="" coords="2222,304,2397,331"/>
+</map>

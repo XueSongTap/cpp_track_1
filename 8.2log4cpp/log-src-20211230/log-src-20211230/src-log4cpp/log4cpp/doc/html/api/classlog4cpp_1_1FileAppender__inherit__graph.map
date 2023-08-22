@@ -1,0 +1,7 @@
+<map id="log4cpp::FileAppender" name="log4cpp::FileAppender">
+<area shape="rect" id="node5" href="$classlog4cpp_1_1DailyRollingFileAppender.html" title="DailyRollingFileAppender is a FileAppender that rolls over the logfile once the next day starts..." alt="" coords="5,304,172,345"/>
+<area shape="rect" id="node6" href="$classlog4cpp_1_1RollingFileAppender.html" title="RollingFileAppender is a FileAppender that rolls over the logfile once it has reached a certain size ..." alt="" coords="196,311,387,338"/>
+<area shape="rect" id="node2" href="$classlog4cpp_1_1LayoutAppender.html" title="LayoutAppender is a common superclass for all Appenders that require a Layout. " alt="" coords="105,155,275,181"/>
+<area shape="rect" id="node3" href="$classlog4cpp_1_1AppenderSkeleton.html" title="AppenderSkeleton is a helper class, simplifying implementation of Appenders: it already takes care of..." alt="" coords="99,80,281,107"/>
+<area shape="rect" id="node4" href="$classlog4cpp_1_1Appender.html" title="Implement this interface for your own strategies for printing log statements. " alt="" coords="125,5,255,32"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="log4cpp::Win32DebugAppender" name="log4cpp::Win32DebugAppender">
+<area shape="rect" id="node2" href="$classlog4cpp_1_1LayoutAppender.html" title="LayoutAppender is a common superclass for all Appenders that require a Layout. " alt="" coords="23,155,193,181"/>
+<area shape="rect" id="node3" href="$classlog4cpp_1_1AppenderSkeleton.html" title="AppenderSkeleton is a helper class, simplifying implementation of Appenders: it already takes care of..." alt="" coords="17,80,199,107"/>
+<area shape="rect" id="node4" href="$classlog4cpp_1_1Appender.html" title="Implement this interface for your own strategies for printing log statements. " alt="" coords="43,5,173,32"/>
+</map>
