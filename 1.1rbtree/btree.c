@@ -6,21 +6,28 @@
 
 #include <assert.h>
 
+
+
+// 这里定义了B树节点btree_node和B树btree的结构体。
+
+
+
 #define DEGREE		3
 typedef int KEY_VALUE;
-
+// btree_node包含键值数组keys、子节点指针数组childrens、存储键值的数量num和是否为叶子节点的标志leaf。
 typedef struct _btree_node {
 	KEY_VALUE *keys;
 	struct _btree_node **childrens;
 	int num;
 	int leaf;
 } btree_node;
-
+// btree结构体则包含一个指向根节点的指针root和树的度t。
 typedef struct _btree {
 	btree_node *root;
 	int t;
 } btree;
 
+//节点创建和销毁
 btree_node *btree_create_node(int t, int leaf) {
 
 	btree_node *node = (btree_node*)calloc(1, sizeof(btree_node));
@@ -53,7 +60,7 @@ void btree_create(btree *T, int t) {
 	
 }
 
-
+// 节点分裂，当节点键值数量达到最大时，需要分裂节点。这个函数处理分裂逻辑。
 void btree_split_child(btree *T, btree_node *x, int i) {
 	int t = T->t;
 
@@ -86,7 +93,7 @@ void btree_split_child(btree *T, btree_node *x, int i) {
 	x->num += 1;
 	
 }
-
+//插入
 void btree_insert_nonfull(btree *T, btree_node *x, KEY_VALUE k) {
 
 	int i = x->num - 1;
@@ -133,14 +140,14 @@ void btree_insert(btree *T, KEY_VALUE key) {
 		btree_insert_nonfull(T, r, key);
 	}
 }
-
+// 遍历和打印
 void btree_traverse(btree_node *x) {
 	int i = 0;
 
 	for (i = 0;i < x->num;i ++) {
 		if (x->leaf == 0) 
 			btree_traverse(x->childrens[i]);
-		printf("%C ", x->keys[i]);
+		printf("%c ", x->keys[i]);
 	}
 
 	if (x->leaf == 0) btree_traverse(x->childrens[i]);
@@ -169,7 +176,7 @@ void btree_print(btree *T, btree_node *node, int layer)
 	else printf("the tree is empty\n");
 }
 
-
+//二分搜索 辅助函数。用于在B树节点的键值数组中使用二分搜索找到给定键值的位置。
 int btree_bin_search(btree_node *node, int low, int high, KEY_VALUE key) {
 	int mid;
 	if (low > high || low < 0 || high < 0) {
@@ -188,7 +195,7 @@ int btree_bin_search(btree_node *node, int low, int high, KEY_VALUE key) {
 	return low;
 }
 
-
+// 节点合并， 当一个节点的键值数量少于最小数量时，可能需要将其与兄弟节点合并。这个函数处理节点合并的逻辑。
 //{child[idx], key[idx], child[idx+1]} 
 void btree_merge(btree *T, btree_node *node, int idx) {
 

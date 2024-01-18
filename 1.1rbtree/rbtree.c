@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+// 这部分代码定义了红黑树节点rbtree_node和红黑树rbtree的结构。每个节点包含颜色、父节点、左子节点、右子节点和键值。红黑树结构包含指向根节点和哨兵节点（nil节点，代表空（NULL）节点，通常是黑色的）的指针。
 
 #define RED     0
 #define BLACK   1
@@ -20,9 +21,8 @@ typedef struct rbtree {
     rbtree_node *root;
     rbtree_node *nil; // NULL
 }rbtree;
-
+// 左旋转和右旋转,旋转操作是红黑树调整结构以保持或恢复平衡的关键操作。左旋转和右旋转是对称的操作，都是将一个节点和它的一个子节点“旋转”以改变树的结构。
 // rotate 
-
 void rbtree_left_rotate(rbtree *T, rbtree_node *x) {
     // NULL --> T->nil
     if (x == T->nil) return ;
@@ -80,6 +80,9 @@ void rbtree_right_rotate(rbtree *T, rbtree_node *y) {
 
 }
 
+// 插入和修复
+// 这些函数实现红黑树键值的插入和插入后的修复。
+// rbtree_insert_fixup函数则负责修复插入操作可能引起的红黑树性质的违反。
 
 void rbtree_insert_fixup(rbtree *T, rbtree_node *z) {
     //
@@ -120,6 +123,7 @@ void rbtree_insert_fixup(rbtree *T, rbtree_node *z) {
 
 
 }
+// rbtree_insert函数负责将新节点插入树中并维持二叉搜索树的属性。
 
 void rbtree_insert(rbtree *T, rbtree_node *z) {
 
@@ -157,7 +161,7 @@ void rbtree_insert(rbtree *T, rbtree_node *z) {
     // 
 
 }
-
+// 这个函数用来在红黑树中查找给定键值的节点。
 rbtree_node* rbtree_search(rbtree* T, int key) {
     rbtree_node* current = T->root;
 
@@ -173,6 +177,18 @@ rbtree_node* rbtree_search(rbtree* T, int key) {
 }
 
 
+
+
+
+/*
+TODO
+
+代码遗漏和问题
+rbtree_insert_fixup函数的实现没有完整提供，这里显示的代码是不完整的。
+rbtree_insert函数在插入节点后没有调用修复函数rbtree_insert_fixup，这是必需的，以保持红黑树的性质。
+main函数中的遍历方法是不正确的，仅遍历了树的右侧节点，并没有正确地显示整棵树的所有键值。
+main函数没有释放分配的内存，这在真实的应用程序中可能会引起内存泄露。
+*/
 int main() {
     rbtree_node *nil = (rbtree_node *)malloc(sizeof(rbtree_node));
     nil->color = BLACK;
