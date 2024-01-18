@@ -1,4 +1,4 @@
-
+// 这段代码是一个基于 netmap 库的网络数据包处理示例。它演示了如何使用 netmap 接口来捕获和处理网络数据包，包括 ARP 和 IP (UDP, TCP) 数据包。以下是代码中各部分的解释：
 
 #include <stdio.h>
 
@@ -20,7 +20,7 @@
 #define PROTO_TCP			6
 #define PROTO_ICMP			1
 
-
+// ethhdr：以太网帧头结构体，包括目的地址、源地址和协议类型。
 struct ethhdr {
 	unsigned char h_dst[ETH_ADDR_LENGTH];
 	unsigned char h_src[ETH_ADDR_LENGTH];
@@ -28,6 +28,7 @@ struct ethhdr {
 	
 }; // 14
 
+// iphdr：IP协议头结构体，包含了版本、头长度、服务类型、总长度、标识、片偏移、TTL(Time To Live)、协议类型、校验和、源IP地址和目的IP地址。
 
 struct iphdr {
 
@@ -56,6 +57,7 @@ struct iphdr {
 }; // 20
 
 
+// udphdr：UDP头结构体，包括源端口、目的端口、长度和校验和。
 
 struct udphdr {
 
@@ -67,6 +69,7 @@ struct udphdr {
 
 }; // 8
 
+// udppkt：组合了以太网头、IP头和UDP头的UDP数据包结构体。
 
 struct udppkt {
 
@@ -78,6 +81,7 @@ struct udppkt {
 
 }; // sizeof(struct udppkt) == 
 
+// arphdr：ARP协议头结构体，包含硬件类型、协议类型、硬件地址长度、协议地址长度、操作码、发送方MAC地址、发送方IP地址、目标MAC地址和目标IP地址。
 
 struct arphdr {
 
@@ -95,6 +99,7 @@ struct arphdr {
 	unsigned char dmac[ETH_ADDR_LENGTH];
 	unsigned int dip;
 };
+// arppkt：包含以太网头和ARP头的ARP数据包结构体。
 
 struct arppkt {
 
@@ -103,6 +108,7 @@ struct arppkt {
 
 };
 
+// tcphdr：TCP头结构体，包括源端口、目的端口、序列号、确认号、头部长度、标志、窗口大小、校验和和紧急指针。
 
 struct tcphdr {
 
@@ -126,6 +132,7 @@ struct tcphdr {
 
 };
 
+// tcppkt：组合了以太网头、IP头和TCP头的TCP数据包结构体。
 
 struct tcppkt {
 
@@ -137,7 +144,7 @@ struct tcppkt {
 
 };
 
-
+// 定义了一个枚举类型 _tcp_status 来标识 TCP 连接的不同状态。
 typedef enum _tcp_status {
 
 	TCP_STATUS_CLOSED,
@@ -155,7 +162,7 @@ typedef enum _tcp_status {
 
 };
 
-
+// 定义了一系列宏来表示 TCP 头中的标志位。
 #define TCP_CWR_FLAG		0x80
 #define TCP_ECE_FLAG		0x40
 #define TCP_URG_FLAG		0x20
@@ -166,6 +173,7 @@ typedef enum _tcp_status {
 #define TCP_FIN_FLAG		0x01
 
 // arp table
+//定义了一个结构体 ntcb 用来维护 TCP 连接的状态和信息。
 struct ntcb {
 
 	unsigned int sip;
@@ -183,7 +191,7 @@ struct ntcb {
 };
 
 
-
+// 一个将字符串格式的MAC地址转换为字节格式的函数。
 int str2mac(char *mac, char *str) {
 
 	char *p = str;
@@ -221,7 +229,9 @@ int str2mac(char *mac, char *str) {
 }
 
 
+// ARP回复函数 echo_arp_pkt：
 
+// 这个函数用于生成一个ARP回应数据包。
 void echo_arp_pkt(struct arppkt *arp, struct arppkt *arp_rt, char *mac) {
 
 	memcpy(arp_rt, arp, sizeof(struct arppkt));
@@ -242,7 +252,15 @@ void echo_arp_pkt(struct arppkt *arp, struct arppkt *arp_rt, char *mac) {
 
 }
 
-//
+//主函数 main：
+
+// 使用 netmap 打开网络接口 eth0。
+// 设置 pollfd 结构体并开始循环，监听网络接口上的数据。
+// 使用 poll 系统调用等待数据包到来。
+// 一旦收到数据包，根据以太网帧头中的协议字段来判定数据包类型并进行相应处理。
+// 对于 IP 数据包，进一步判断具体的协议（UDP、TCP或ICMP）并处理。
+// 对于 ARP 请求，如果请求的 IP 地址与指定的 IP 地址匹配，则调用 echo_arp_pkt 函数生成 ARP 响应。
+// 使用 nm_inject 函数发送生成的响应数据包。
 int main() {
 
 	struct nm_pkthdr h;
@@ -348,4 +366,6 @@ int main() {
 
 
 
+
+// 这段代码主要展现了如何使用 netmap 库来捕获和处理数据包。但是它不包括完整的错误处理和资源管理。例如，没有释放 netmap 资源，也没有完整处理 TCP 连接建立和断开的过程。如果要用于生产环境，代码需要做进一步完善。此外，代码中的硬编码值（比如 IP 地址 "192.168.0.123" 和 MAC 地址 "00:50:56:33:1c:ca"）应该根据实际情况进行替换。
 

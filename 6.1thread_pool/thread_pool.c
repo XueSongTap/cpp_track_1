@@ -7,7 +7,7 @@
 #include <pthread.h>
 
 
-
+// 使用宏定义LL_ADD和LL_REMOVE来简化链表操作。
 #define LL_ADD(item, list) do { 	\
 	item->prev = NULL;				\
 	item->next = list;				\
@@ -21,7 +21,7 @@
 	item->prev = item->next = NULL;							\
 } while(0)
 
-
+//代码中定义了三个结构：nWorker表示线程池中的工作线程，nJob表示工作队列中的工作项，nWorkQueue表示线程池。
 typedef struct NWORKER {
 	pthread_t thread;
 	int terminate;
@@ -45,7 +45,7 @@ typedef struct NWORKQUEUE {
 } nWorkQueue;
 
 typedef nWorkQueue nThreadPool;
-
+//ntyWorkerThread是线程函数，每个线程在这个函数中循环，等待工作项，然后执行它们。
 static void *ntyWorkerThread(void *ptr) {
 	nWorker *worker = (nWorker*)ptr;
 
@@ -79,7 +79,7 @@ static void *ntyWorkerThread(void *ptr) {
 }
 
 
-
+//ntyThreadPoolCreate函数创建指定数量的工作线程，并将它们加入线程池。
 int ntyThreadPoolCreate(nThreadPool *workqueue, int numWorkers) {
 
 	if (numWorkers < 1) numWorkers = 1;
@@ -117,7 +117,7 @@ int ntyThreadPoolCreate(nThreadPool *workqueue, int numWorkers) {
 	return 0;
 }
 
-
+//ntyThreadPoolShutdown函数关闭线程池，停止所有工作线程。
 void ntyThreadPoolShutdown(nThreadPool *workqueue) {
 	nWorker *worker = NULL;
 
@@ -169,7 +169,17 @@ void king_counter(nJob *job) {
 	free(job);
 }
 
+/*
+代码的缺点和需要改进的地方：
 
+	没有实现线程的正确回收。在ntyWorkerThread函数中，free(worker)应在pthread_exit(NULL)之前调用。
+	在ntyThreadPoolShutdown函数中，应该等待所有工作线程结束（使用pthread_join）。
+	不应该直接设置workqueue->workers = NULL;在ntyThreadPoolShutdown中，否则可能会在工作线程中导致访问非法内存。
+	ntyThreadPoolCreate函数中使用的pthread_cond_t和pthread_mutex_t的初始化方式不是最优的，应该直接调用pthread_cond_init和pthread_mutex_init。
+	main函数中的工作函数king_counter不会正确地结束线程池，也不会清理已经分配的线程池资源。
+	这段代码提供了一个基本的线程池框架，但在用于生产环境之前需要进行一些关键的改进和完善。
+
+*/
 
 int main(int argc, char *argv[]) {
 

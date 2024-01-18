@@ -24,6 +24,7 @@
 #define PROTO_ICMP	1
 #define PROTO_IGMP	2
 
+// ethhdr：以太网帧头结构体，包括目的地址、源地址和协议类型。
 struct ethhdr {
 	unsigned char h_dest[ETH_ALEN];
 	unsigned char h_source[ETH_ALEN];
@@ -31,6 +32,7 @@ struct ethhdr {
 };
 
 
+// iphdr：IP协议头结构体，包含了版本、头长度、服务类型、总长度、标识、片偏移、TTL(Time To Live)、协议类型、校验和、源IP地址和目的IP地址。
 
 struct iphdr {
 	unsigned char version;
@@ -45,6 +47,7 @@ struct iphdr {
 	unsigned int daddr;
 };
 
+// udphdr：UDP头结构体，包括源端口、目的端口、长度和校验和。
 
 struct udphdr {
 	unsigned short source;
@@ -53,6 +56,7 @@ struct udphdr {
 	unsigned short check;
 };
 
+// udppkt：组合了以太网头、IP头和UDP头的UDP数据包结构体。
 
 struct udppkt {
 	struct ethhdr eh;
@@ -62,6 +66,7 @@ struct udppkt {
 };
 
 
+// arphdr：ARP协议头结构体，包含硬件类型、协议类型、硬件地址长度、协议地址长度、操作码、发送方MAC地址、发送方IP地址、目标MAC地址和目标IP地址。
 
 struct arphdr {
 	unsigned short h_type;
@@ -74,6 +79,7 @@ struct arphdr {
 	unsigned char dmac[ETH_ALEN];
 	unsigned int dip;
 };
+// arppkt：包含以太网头和ARP头的ARP数据包结构体。
 
 struct arppkt {
 	struct ethhdr eh;

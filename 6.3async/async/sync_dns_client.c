@@ -18,15 +18,20 @@
 #include <arpa/inet.h>
 
 #include <pthread.h>
+// 这份代码是一个简单的 DNS 客户端程序，编写于 C 语言。它的目的是解析一系列硬编码的域名到它们对应的 IP 地址，并打印出来。程序使用 UDP 协议发送 DNS 请求到硬编码的 DNS 服务器 114.114.114.114 并解析响应。下面是代码的逐步解释：
 
+
+// DNS_SVR 定义了 DNS 服务器的 IP 地址。
 
 #define DNS_SVR				"114.114.114.114"
 
+// DNS_HOST 和 DNS_CNAME 分别定义了 DNS 查询类型的常量，分别用于主机地址和别名记录。
 
 #define DNS_HOST			0x01
 #define DNS_CNAME			0x05
 
 
+// struct dns_header 是 DNS 协议头部的结构体定义。
 
 struct dns_header {
 	unsigned short id;
@@ -36,19 +41,19 @@ struct dns_header {
 	unsigned short nscount;
 	unsigned short arcount;
 };
-
+// struct dns_question 是 DNS 查询部分的结构体定义。
 struct dns_question {
 	int length;
 	unsigned short qtype;
 	unsigned short qclass;
 	char *qname;
 };
-
+// struct dns_item 用于存储解析出的域名和对应的 IP 地址。
 struct dns_item {
 	char *domain;
 	char *ip;
 };
-
+// dns_create_header 初始化 DNS 查询的头部。
 int dns_create_header(struct dns_header *header) {
 
 	if (header == NULL) return -1;
@@ -62,7 +67,7 @@ int dns_create_header(struct dns_header *header) {
 
 	return 0;
 }
-
+// dns_create_question 根据提供的域名构造 DNS 查询的问题部分。
 int dns_create_question(struct dns_question *question, const char *hostname) {
 
 	if (question == NULL) return -1;
@@ -101,7 +106,7 @@ int dns_create_question(struct dns_question *question, const char *hostname) {
 	return 0;
 	
 }
-
+// dns_build_request 将 DNS 查询的头部和问题部分构造成一个完整的 DNS 请求。
 int dns_build_request(struct dns_header *header, struct dns_question *question, char *request) {
 
 	int header_s = sizeof(struct dns_header);
@@ -124,12 +129,12 @@ int dns_build_request(struct dns_header *header, struct dns_question *question, 
 	return length;
 	
 }
-
+// is_pointer 检查 DNS 名称是否是指针（用于消息压缩）。
 static int is_pointer(int in) {
 	return ((in & 0xC0) == 0xC0);
 }
 
-
+// dns_parse_name 解析 DNS 响应中的域名。
 static void dns_parse_name(unsigned char *chunk, unsigned char *ptr, char *out, int *len) {
 
 	int flag = 0, n = 0, alen = 0;
@@ -166,7 +171,7 @@ static void dns_parse_name(unsigned char *chunk, unsigned char *ptr, char *out, 
 	
 }
 
-
+// dns_parse_response 解析 DNS 服务器返回的完整响应，并提取出域名和对应的 IP 地址。
 static int dns_parse_response(char *buffer, struct dns_item **domains) {
 
 	int i = 0;
@@ -253,7 +258,7 @@ static int dns_parse_response(char *buffer, struct dns_item **domains) {
 	
 }
 
-
+// dns_client_commit 发送 DNS 查询并接收响应，是客户端工作的核心函数。
 int dns_client_commit(const char *domain) {
 
 	int sockfd = socket(AF_INET, SOCK_DGRAM, 0);
@@ -345,7 +350,9 @@ char *domain[] = {
 };
 
 
-
+// 程序定义了一个包含多个域名字符串的数组 domain。
+// main 函数遍历该数组，对每一个域名调用 dns_client_commit 函数来执行 DNS 查询。
+// 执行完所有查询后，程序等待用户按下任意键以结束。
 int main(int argc, char *argv[]) {
 
 	int count = sizeof(domain) / sizeof(domain[0]);

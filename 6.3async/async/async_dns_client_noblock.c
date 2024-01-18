@@ -18,7 +18,7 @@
 #include <arpa/inet.h>
 
 #include <pthread.h>
-
+// 代码是一个异步 DNS 客户端的实现，它使用非阻塞套接字和 epoll 进行多个并行 DNS 查询
 
 #define DNS_SVR				"114.114.114.114"
 
@@ -52,11 +52,11 @@ struct dns_item {
 
 typedef void (*async_result_cb)(struct dns_item *list, int count);
 
-
+// struct async_context 包含 epoll 文件描述符。
 struct async_context {
 	int epfd;
 };
-
+// struct ep_arg 包含套接字描述符和回调函数指针。
 struct ep_arg {
 	int sockfd;
 	async_result_cb cb;
@@ -141,7 +141,7 @@ int dns_build_request(struct dns_header *header, struct dns_question *question, 
 static int is_pointer(int in) {
 	return ((in & 0xC0) == 0xC0);
 }
-
+// set_block 设置套接字为非阻塞或阻塞模式。
 static int set_block(int fd, int block) {
 	int flags = fcntl(fd, F_GETFL, 0);
 	if (flags < 0) return flags;
@@ -329,6 +329,7 @@ int dns_client_commit(const char *domain) {
 
 	return 0;
 }
+// dns_async_client_free_domains 释放解析结果的内存。
 
 void dns_async_client_free_domains(struct dns_item *list, int count) {
 	int i = 0;
@@ -345,6 +346,7 @@ void dns_async_client_free_domains(struct dns_item *list, int count) {
 //dns_async_client_proc()
 //epoll_wait
 //result callback
+// dns_async_client_proc 函数运行在单独的线程中，使用 epoll_wait 监听事件，接收 DNS 响应，并调用注册的回调函数。
 static void* dns_async_client_proc(void *arg) {
 	struct async_context *ctx = (struct async_context*)arg;
 
@@ -401,6 +403,8 @@ static void* dns_async_client_proc(void *arg) {
 //dns_async_client_init()
 //epoll init
 //thread init
+// dns_async_client_init 初始化异步客户端，包括创建 epoll 实例和启动处理线程。
+
 struct async_context *dns_async_client_init(void) {
 
 	int epfd = epoll_create(1); // 
@@ -429,6 +433,7 @@ struct async_context *dns_async_client_init(void) {
 //socket init
 //dns_request
 //sendto dns send
+//dns_async_client_commit 提交异步 DNS 查询。它创建非阻塞套接字，发送 DNS 请求，并将套接字添加到 epoll 实例进行监听。
 int dns_async_client_commit(struct async_context* ctx, const char *domain, async_result_cb cb) {
 
 	int sockfd = socket(AF_INET, SOCK_DGRAM, 0);
@@ -526,7 +531,7 @@ char *domain[] = {
 	"lipin.ctrip.com",
 	"ct.ctrip.com"
 };
-
+//dns_async_client_result_callback 是结果回调函数的一个示例实现，它打印查询结果。
 static void dns_async_client_result_callback(struct dns_item *list, int count) {
 	int i = 0;
 
@@ -535,7 +540,9 @@ static void dns_async_client_result_callback(struct dns_item *list, int count) {
 	}
 }
 
+// 在 main 函数中，程序初始化异步 DNS 客户端上下文，然后遍历域名列表，对每个域名发起异步 DNS 查询。
 
+// 这个非阻塞的异步 DNS 客户端程序是一个高效处理多个 DNS 查询的例子，它避免了阻塞等待响应的需求，并可以处理大量的并发 DNS 查询。程序使用了 POSIX 线程 (pthread)，非阻塞 I/O (O_NONBLOCK)，以及 epoll 事件通知机制，这些都是现代高性能网络编程的关键特性。
 int main(int argc, char *argv[]) {
 #if 0
 	dns_client_commit(argv[1]);

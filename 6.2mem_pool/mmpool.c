@@ -9,7 +9,7 @@
 #include <fcntl.h>
 
 
-
+// 这些宏用于内存对齐，保证分配的内存地址满足某些对齐要求。例如，MP_ALIGNMENT 定义了32字节对齐。
 #define MP_ALIGNMENT       		32
 #define MP_PAGE_SIZE			4096
 #define MP_MAX_ALLOC_FROM_POOL	(MP_PAGE_SIZE-1)
@@ -20,12 +20,12 @@
 
 
 
-
+// 用来管理大块内存分配的结构体。
 struct mp_large_s {
 	struct mp_large_s *next;
 	void *alloc;
 };
-
+// 代表内存池中的一个固定大小的内存块，包含指向内存块末尾的指针 last、指向内存块实际结束位置的指针 end、下一个内存块的指针 next，以及失败次数记录 failed。
 struct mp_node_s {
 
 	unsigned char *last;
@@ -34,7 +34,7 @@ struct mp_node_s {
 	struct mp_node_s *next;
 	size_t failed;
 };
-
+// 代表整个内存池，包含最大内存分配限制 max、当前操作的内存块 current、大内存块链表 large，和一个头部内存块 head。
 struct mp_pool_s {
 
 	size_t max;
@@ -45,13 +45,14 @@ struct mp_pool_s {
 	struct mp_node_s head[0];
 
 };
-
+// 内存池创建和销毁
 struct mp_pool_s *mp_create_pool(size_t size);
 void mp_destory_pool(struct mp_pool_s *pool);
-void *mp_alloc(struct mp_pool_s *pool, size_t size);
-void *mp_nalloc(struct mp_pool_s *pool, size_t size);
-void *mp_calloc(struct mp_pool_s *pool, size_t size);
-void mp_free(struct mp_pool_s *pool, void *p);
+// 内存分配和释放函数
+void *mp_alloc(struct mp_pool_s *pool, size_t size); //mp_alloc 从内存池中分配内存，先尝试从固定大小的内存块分配，如果请求的大小太大，将使用 mp_alloc_large 从系统中分配大内存块。
+void *mp_nalloc(struct mp_pool_s *pool, size_t size); // mp_nalloc 类似于 mp_alloc，但不进行内存对齐。
+void *mp_calloc(struct mp_pool_s *pool, size_t size); // mp_calloc 分配内存并初始化为0。
+void mp_free(struct mp_pool_s *pool, void *p); // mp_free 释放之前分配的大块内存。
 
 
 struct mp_pool_s *mp_create_pool(size_t size) {
@@ -281,7 +282,12 @@ void mp_free(struct mp_pool_s *pool, void *p) {
 	
 }
 
+/*
+main 函数
+这是一个测试 main 函数，它演示了如何创建内存池、从池中分配和释放内存、以及最终销毁内存池。
 
+这个内存池管理器主要为了高效管理内存分配和释放，但是它并不管理小块内存的释放（它只能释放大块内存）。因为内存池通常在一块内存生命周期结束时一次性释放所有内存块。在分配小块内存时，内存池管理器不跟踪这些小块内存的具体情况，所以不能单独释放它们。这种设计模式在生命周期明确且内存使用量较大的场景中非常有用。
+*/
 int main(int argc, char *argv[]) {
 
 	int size = 1 << 12;
